@@ -86,7 +86,7 @@ public class DialogFactory {
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(context);
 		builder.setTitle(R.string.about);
-		builder.setIcon(R.drawable.page_turner);
+//		builder.setIcon(R.drawable.page_turner);
 
 		String version = "";
 		try {

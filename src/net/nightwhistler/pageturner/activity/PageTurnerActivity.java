@@ -7,25 +7,29 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ExpandableListView;
+
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.Window;
 import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockFragmentActivity;
 import com.google.inject.Inject;
 import com.limecreativelabs.sherlocksupport.ActionBarDrawerToggleCompat;
-import jedi.option.Option;
+
 import net.nightwhistler.pageturner.Configuration;
 import net.nightwhistler.pageturner.PageTurner;
 import net.nightwhistler.pageturner.R;
 import net.nightwhistler.pageturner.view.NavigationCallback;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import roboguice.RoboGuice;
-import roboguice.inject.InjectView;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import jedi.option.Option;
+import roboguice.RoboGuice;
+import roboguice.inject.InjectView;
 
 /**
  * Superclass for all PageTurner activity classes.
@@ -174,8 +178,8 @@ public abstract class PageTurnerActivity extends RoboSherlockFragmentActivity {
             result.add( navigate(nowReading, ReadingActivity.class));
         }
 
-        result.add( navigate(getString(R.string.open_library), LibraryActivity.class) );
-        result.add( navigate(getString(R.string.download), CatalogActivity.class));
+//        result.add( navigate(getString(R.string.open_library), LibraryActivity.class) );
+//        result.add( navigate(getString(R.string.download), CatalogActivity.class));
 
         result.add( new NavigationCallback(getString(R.string.prefs)).setOnClick(this::startPreferences));
 
